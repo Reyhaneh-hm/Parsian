@@ -1,0 +1,341 @@
+/* ---------------Color--------------- */
+:root {
+    --main1: #FFBF00;
+    --main2: #021222;
+    --main3: #004790;
+
+    --white: #fff;
+    --black: #000;
+    --text: #555967;
+    --block: #cccccc;
+
+    --border: 2px solid #F3F7FE;
+}
+
+/* ----------------Video---------------- */
+
+.Video .card {
+    margin: 100px 0 170px;
+    overflow: hidden;
+}
+
+.Video .card .box-title {
+    width: 100%;
+    margin-bottom: 40px;
+
+}
+
+.Video .card .box-title .title {
+    color: #004790;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.Video .card .box-title .icon {
+    color: #fe7f2d;
+    font-size: 9px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+.main-video {
+    flex: 3;
+    border-radius: 10px;
+}
+
+.main-video video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-info {
+    margin-top: 20px;
+}
+
+.video-info h2 {
+    margin-bottom: 10px;
+    color: var(--main2);
+    font-size: 20px;
+}
+
+.video-info .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 15px;
+}
+
+.video-info .bottom .tags {
+    font-size: 14px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.video-info .bottom .tags .item {
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.video-info .bottom .video-meta {
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 100;
+}
+
+.video-info .bottom .video-meta span {
+    margin-inline: 5px;
+}
+
+.video-info .description {
+    max-height: 85px;
+    line-height: 1.8;
+    text-align: justify;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.3s ease;
+}
+
+.video-info .description p {
+    font-size: 15px;
+    color: var(--main2);
+}
+
+.video-info .description.expanded {
+    max-height: none;
+}
+
+.video-info .toggle-description {
+    cursor: pointer;
+    color: var(--main3);
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 200;
+    display: inline-block;
+}
+
+.card .title-rel {
+    display: none;
+    font-size: 16px;
+    color: var(--main3);
+    order: 2;
+    text-align: right;
+    width: 100%;
+    margin-top: 45px;
+}
+
+.sidebar {
+    flex: 1;
+    border-radius: 10px;
+    padding-right: 20px;
+}
+
+.related-video {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 80px;
+}
+
+.related-video img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.related-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.related-info h4 {
+    font-size: 14px;
+    font-weight: 200;
+    color: var(--main2);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+
+.related-info .meta {
+    font-size: 12px;
+    color: var(--text);
+}
+
+/*-------------Scroll----------*/
+.Video .card .bottom {
+    width: 100%;
+}
+
+.Video .card .bottom .title-product {
+    font-size: 16px;
+    color: var(--main3);
+    text-align: right;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.Video .card .bottom .scroll-specialProduct {
+    gap: 20px;
+    padding-block: 10px;
+    padding-inline: 0;
+    overflow-x: auto;
+    transition: all 0.3s;
+    display: flex;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.Video .card .bottom .scroll-specialProduct::-webkit-scrollbar {
+    display: none;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product {
+    gap: 8px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    display: flex;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item {
+    border-radius: 12px;
+    width: 100%;
+    max-width: 320px;
+    min-width: 300px;
+    height: 100px;
+    padding: 2px;
+    display: flex;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item .image {
+    width: 95%;
+    height: 88px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item .image .img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 0.8;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item .content {
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+    padding: 5px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item .content .top .title {
+    color: var(--main2);
+    font-size: 14px;
+    font-weight: 200;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item .content .top .score {
+    color: var(--main2);
+    font-size: 15px;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item .content .top .score .icon {
+    color: var(--main2);
+    font-size: 12px;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item .content .bottom {
+    display: flex;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item .content .bottom .money {
+    font-size: 14px;
+    color: var(--main2);
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item .content .bottom .money .toman {
+    color: var(--main2);
+    font-size: 12px;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item .content .bottom .discount {
+    color: #ff3333;
+    font-size: 14px;
+    margin-left: 40px;
+}
+
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 60px !important;
+    }
+
+    .card .box-title {
+        margin-bottom: 20px;
+    }
+
+    .card .title-rel {
+        display: block;
+    }
+
+    .sidebar {
+        order: 3;
+        padding-right: 0;
+        margin-top: 25px;
+        overflow-x: auto;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .sidebar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .related-video {
+        width: 100%;
+        max-width: 320px;
+        min-width: 300px;
+        height: 100px;
+        padding: 2px;
+    }
+
+    .related-video img {
+        width: 140px;
+        height: 88px;
+    }
+
+    .bottom {
+        order: 4;
+    }
+}

@@ -1,0 +1,296 @@
+/* ---------------Color--------------- */
+:root {
+    --main1: #FFBF00;
+    --main2: #021222;
+    --main3: #004790;
+
+    --white: #fff;
+    --black: #000;
+    --text: #555967;
+    --block: #cccccc;
+
+    --border: 2px solid #F3F7FE;
+}
+
+/* ----------------FAQ---------------- */
+.FAQ .card {
+    margin-block: 120px;
+    overflow: hidden;
+}
+
+.FAQ .card .box-title {
+    width: 100%;
+}
+
+.FAQ .card .box-title .title {
+    color: #004790;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.FAQ .card .box-title .icon {
+    color: #fe7f2d;
+    font-size: 9px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+.FAQ .card .faq-header {
+    /* background-color: #f8f8f8; */
+    min-height: 290px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px 0 rgba(2, 18, 34, .11);
+}
+
+.FAQ .card .faq-header .titr-search {
+    color: var(--main2);
+    font-size: 25px;
+}
+
+.FAQ .card .faq-header .input-wrapper {
+    display: none !important;
+    background-color: var(--white);
+    min-height: 50px;
+    border-radius: 10px;
+    margin: 40px 0 25px;
+    padding: 15px 20px;
+    border: 2px solid var(--white);
+    box-shadow: 0 0 15px -15px var(--block);
+    transition: all 0.3s;
+}
+
+.FAQ .card .faq-header .input-wrapper .box-icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+}
+
+.FAQ .card .faq-header .input-wrapper .box-icon .icon {
+    font-size: 18px;
+    color: var(--text);
+}
+
+.FAQ .card .faq-header .input-wrapper .input-search {
+    color: var(--text);
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+}
+
+.FAQ .card .faq-header .input-wrapper:focus-within {
+    border: 2px solid var(--main2);
+}
+
+.FAQ .card .faq-header .text-search {
+    color: var(--text);
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.5;
+    margin-block: 15px;
+}
+
+.FAQ .card .faq-body {
+    margin-block: 50px;
+}
+
+.FAQ .card .faq-body .content-faq .categories {
+    padding-right: 0;
+    margin-bottom: 45px;
+}
+
+.FAQ .card .faq-body .content-faq .categories .nav {
+    min-height: 100px;
+    width: 100%;
+}
+
+.FAQ .card .faq-body .content-faq .categories .nav .nav-link {
+    width: 100%;
+    border-radius: 10px;
+    border: 0;
+    background: transparent;
+    padding: 15px;
+    text-align: right;
+    cursor: pointer;
+    position: relative;
+    color: var(--main2);
+    border: 1px solid #fff;
+    transition: all 0.3s;
+}
+
+.FAQ .card .faq-body .content-faq .categories .nav .nav-link .icon {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.FAQ .card .faq-body .content-faq .categories .nav .nav-link .icon-Card {
+    font-size: 22px;
+}
+
+.FAQ .card .faq-body .content-faq .categories .nav .nav-link .icon-arrow-back {
+    font-size: 18px;
+    margin-left: 13px;
+}
+
+.FAQ .card .faq-body .content-faq .categories .nav .nav-link .text-navItem {
+    font-size: 15px;
+}
+
+.FAQ .card .faq-body .content-faq .categories .nav .nav-link.active {
+    color: var(--main3);
+}
+
+.FAQ .card .faq-body .content-faq .categories .nav .nav-link.active::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: var(--main3);
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    top: 21px;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item {
+    display: none;
+    transition: all 0.3s;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item.active {
+    display: block;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .titr {
+    gap: 20px;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .titr .box-icon {
+    background: #f5f7fa;
+    color: var(--main2);
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .titr .box-icon .icon {
+    font-size: 23px;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .titr .box-icon .icon-Card {
+    font-size: 25px;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .titr .box-icon .icon-arrow-back {
+    font-size: 21px;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .titr .info .title {
+    font-size: 18px;
+    font-weight: 200;
+    color: var(--main2);
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .titr .info .desc {
+    font-size: 15px;
+    font-weight: 200;
+    color: var(--text);
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .accordion {
+    margin-top: 20px;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .accordion .accordion-item {
+    border-radius: 10px;
+    box-shadow: 0 3px 12px 0 rgba(2, 18, 34, .11);
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .accordion .accordion-header {
+    color: var(--main2);
+    padding: 20px;
+    text-align: right;
+    cursor: pointer;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    border: none;
+    transition: all 0.3s;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .accordion .accordion-header .icon {
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--main2);
+    transition: all 0.3s;
+    transform: rotate(270deg);
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .accordion .accordion-header.active {
+    color: var(--main3);
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .accordion .accordion-header.active .icon {
+    color: var(--main3);
+    transform: rotate(90deg);
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .accordion .accordion-body {
+    padding: 0 15px;
+    line-height: 2;
+    font-size: 14px;
+    color: var(--text);
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    transition: all 0.3s;
+    max-height: 0;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .accordion .accordion-body.active {
+    padding: 0 15px 15px;
+}
+
+.FAQ .card .faq-body .content-faq .questions .item .accordion .accordion-body a {
+    color: var(--main2);
+}
+
+.FAQ .card .comment_form {
+    margin: 80px auto;
+}
+
+.FAQ .card .comment_form .title {
+    color: var(--main3);
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+/* -------- responsive --------- */
+
+@media screen and (max-width: 768px) {
+    .FAQ .card {
+        margin-bottom: 0;
+    }
+
+    .FAQ .card .comment_form {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .FAQ .card .faq-header .titr-search {
+        font-size: 20px;
+    }
+
+    .FAQ .card .faq-body .content-faq {
+        flex-direction: column;
+    }
+}
