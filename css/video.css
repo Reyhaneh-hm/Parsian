@@ -181,112 +181,113 @@
 }
 
 .Video .card .bottom .title-product {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 200;
     color: var(--main3);
     text-align: right;
     width: 100%;
     margin-top: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .Video .card .bottom .scroll-specialProduct {
     gap: 20px;
     padding-block: 10px;
     padding-inline: 0;
-    overflow-x: auto;
     transition: all 0.3s;
     display: flex;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.Video .card .bottom .scroll-specialProduct::-webkit-scrollbar {
-    display: none;
 }
 
 .Video .card .bottom .scroll-specialProduct .row-product {
-    gap: 8px;
-    scroll-snap-align: start;
     flex-shrink: 0;
-    display: flex;
+    padding-inline: 5px 10px;
 }
 
 .Video .card .bottom .scroll-specialProduct .row-product .item {
     border-radius: 12px;
-    width: 100%;
-    max-width: 320px;
-    min-width: 300px;
-    height: 100px;
-    padding: 2px;
-    display: flex;
-}
-
-.Video .card .bottom .scroll-specialProduct .row-product .item .image {
-    width: 95%;
-    height: 88px;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.Video .card .bottom .scroll-specialProduct .row-product .item .image .img {
-    width: 100%;
-    object-fit: cover;
-    aspect-ratio: 1 / 0.8;
-}
-
-.Video .card .bottom .scroll-specialProduct .row-product .item .content {
-    width: 100%;
-    height: 100%;
-    gap: 5px;
-    padding: 5px 8px;
+    background: #f2f2f2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    padding: 30px 10px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    height: 20rem;
+    margin-bottom: 55px;
 }
 
-.Video .card .bottom .scroll-specialProduct .row-product .item .content .top .title {
-    color: var(--main2);
+.Video .card .bottom .scroll-specialProduct .row-product .item:hover {
+    background-color: #fff;
+    box-shadow: 0 3px 12px 0 rgba(2, 18, 34, .11);
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item::before {
+    font-family: icomoon !important;
+    content: "\e92c";
+    color: #fe7f2d;
+    position: absolute;
+    bottom: 35px;
+    transition: .3s ease-in-out;
     font-size: 14px;
-    font-weight: 200;
+    transform: scale(0);
+    transform-origin: left center;
+    left: 190px;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item:hover::before {
+    bottom: 48px;
+    transform: scale(1);
+    left: 185px;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item .top {
+    text-align: center;
+}
+
+.Video .card .bottom .scroll-specialProduct .row-product .item .top .title {
+    color: var(--main2);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 1;
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: 200;
 }
 
-.Video .card .bottom .scroll-specialProduct .row-product .item .content .top .score {
-    color: var(--main2);
-    font-size: 15px;
+.Video .card .bottom .scroll-specialProduct .row-product .item .image {
+    overflow: hidden;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 287px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
-.Video .card .bottom .scroll-specialProduct .row-product .item .content .top .score .icon {
-    color: var(--main2);
-    font-size: 12px;
+.Video .card .bottom .scroll-specialProduct .row-product .item .image .img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 0.7;
+    transition: all 0.3s;
 }
 
-.Video .card .bottom .scroll-specialProduct .row-product .item .content .bottom {
-    display: flex;
+.Video .card .bottom .scroll-specialProduct .row-product .item:hover .image .img {
+    transform: scale(1.08);
 }
-
-.Video .card .bottom .scroll-specialProduct .row-product .item .content .bottom .money {
-    font-size: 14px;
-    color: var(--main2);
-}
-
-.Video .card .bottom .scroll-specialProduct .row-product .item .content .bottom .money .toman {
-    color: var(--main2);
-    font-size: 12px;
-}
-
-.Video .card .bottom .scroll-specialProduct .row-product .item .content .bottom .discount {
-    color: #ff3333;
-    font-size: 14px;
-    margin-left: 40px;
-}
-
 
 /* Mobile responsive */
+@media screen and (max-width: 1024px) {
+    .row-product .item::before {
+        left: 160px !important;
+    }
+
+    .row-product .item:hover::before {
+        left: 150px !important;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -337,5 +338,43 @@
 
     .bottom {
         order: 4;
+    }
+
+    .row-product .item::before {
+        left: 180px !important;
+    }
+
+    .row-product .item:hover::before {
+        left: 170px !important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .row-product .item::before {
+        left: 200px !important;
+    }
+
+    .row-product .item:hover::before {
+        left: 190px !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .row-product .item::before {
+        left: 175px !important;
+    }
+
+    .row-product .item:hover::before {
+        left: 165px !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .row-product .item::before {
+        left: 160px !important;
+    }
+
+    .row-product .item:hover::before {
+        left: 150px !important;
     }
 }
